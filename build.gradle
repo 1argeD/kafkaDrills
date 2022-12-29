@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '11'
 
 repositories {
     mavenCentral()
@@ -15,8 +15,10 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.kafka:spring-kafka'
+    implementation 'org.projectlombok:lombok:1.18.24'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.kafka:spring-kafka-test'
+    annotationProcessor 'org.projectlombok:lombok'
 }
 
 tasks.named('test') {
